@@ -36,6 +36,9 @@ class MainActivity : AppCompatActivity() {
             binding.boxThreeText,
             binding.boxFourText,
             binding.boxFiveText,
+            binding.redButton,
+            binding.yellowButton,
+            binding.greenButton,
             binding.constraintLayout
         )
 
@@ -57,8 +60,13 @@ class MainActivity : AppCompatActivity() {
 
             // Android color resources = setBackgroundResource()
             binding.boxThreeText.id -> view.setBackgroundResource(android.R.color.holo_blue_light)
-            binding.boxFourText.id -> view.setBackgroundResource(android.R.color.holo_green_dark)
-            binding.boxFiveText.id -> view.setBackgroundResource(android.R.color.holo_blue_bright)
+            binding.boxFourText.id -> view.setBackgroundResource(android.R.color.holo_blue_dark)
+            binding.boxFiveText.id -> view.setBackgroundResource(android.R.color.holo_purple)
+
+            // Boxes using custom colors for background
+            binding.redButton.id -> binding.boxThreeText.setBackgroundResource(android.R.color.holo_red_dark)
+            binding.yellowButton.id -> binding.boxFourText.setBackgroundResource(android.R.color.holo_orange_dark)
+            binding.greenButton.id -> binding.boxFiveText.setBackgroundResource(android.R.color.holo_green_dark)
 
             // Default
             else -> view.setBackgroundColor(Color.LTGRAY)
